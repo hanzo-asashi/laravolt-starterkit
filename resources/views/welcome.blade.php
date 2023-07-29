@@ -241,7 +241,7 @@
             --tw-backdrop-invert: ;
             --tw-backdrop-opacity: ;
             --tw-backdrop-saturate: ;
-            --tw-backdrop-sepia:
+            --tw-backdrop-sepia: ;
         }
 
         ::-webkit-backdrop {
@@ -288,7 +288,7 @@
             --tw-backdrop-invert: ;
             --tw-backdrop-opacity: ;
             --tw-backdrop-saturate: ;
-            --tw-backdrop-sepia:
+            --tw-backdrop-sepia: ;
         }
 
         ::backdrop {
@@ -335,7 +335,7 @@
             --tw-backdrop-invert: ;
             --tw-backdrop-opacity: ;
             --tw-backdrop-saturate: ;
-            --tw-backdrop-sepia:
+            --tw-backdrop-sepia: ;
         }
 
         .relative {

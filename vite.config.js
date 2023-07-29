@@ -20,7 +20,12 @@ export default defineConfig({
     //     ],
     // }),
     laravel({
-      input: ['resources/css/app.css', 'resources/js/app.js'],
+      input: [
+        'resources/css/app.scss',
+        'resources/js/custom/store.js',
+        'resources/js/main.js',
+        'resources/js/app.js',
+      ],
       refresh: true,
     }),
   ],

@@ -169,7 +169,10 @@
                                                 <input type="text"
                                                        name="{{ $item['key'] }}"
                                                        id="{{ $item['key'] }}"
-                                                       class="w-full border border-slate-300 bg-[#FBFBFB] py-[10px] px-4 outline-none focus:outline-none focus:ring-0 focus:border-[#000000] shadow-none !rounded-md text-base text-black overflow=hidden read-only:cursor-not-allowed read-only:bg-slate-200"
+                                                       class="w-full border border-slate-300 bg-[#FBFBFB] py-[10px] px-4
+                                                        outline-none focus:outline-none focus:ring-0 focus:border-[#000000]
+                                                         shadow-none !rounded-md text-base text-black overflow=hidden
+                                                          read-only:cursor-not-allowed read-only:bg-slate-200"
                                                        value="{{ $item['data']['value'] }}"
                                                        placeholder="{{ $item['key'] }}">
                                             </div>

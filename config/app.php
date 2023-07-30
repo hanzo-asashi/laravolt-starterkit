@@ -4,6 +4,15 @@ use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
 return [
+    /*
+|--------------------------------------------------------------------------
+| Frontend URL
+|--------------------------------------------------------------------------
+|
+| Frontend URL is used to generate the verification link.
+|
+*/
+    'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
 
     /*
     |--------------------------------------------------------------------------
@@ -16,7 +25,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Laravolt Starter'),
 
     /*
     |--------------------------------------------------------------------------
@@ -70,7 +79,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Makassar',
 
     /*
     |--------------------------------------------------------------------------
@@ -84,6 +93,10 @@ return [
     */
 
     'locale' => 'en',
+    'available_locales' => [
+        'en' => 'united-states',
+        'id' => 'indonesia',
+    ],
 
     /*
     |--------------------------------------------------------------------------

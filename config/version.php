@@ -6,6 +6,7 @@ if (empty($tag)) {
     $tag = '-.-.-';
 }
 
+
 $hash = trim(exec('git log --pretty="%h" -n1 HEAD'));
 $date = Carbon\Carbon::parse(trim(exec('git log -n1 --pretty=%ci HEAD')));
 

@@ -1,6 +1,8 @@
 <?php
 
 use App\Settings\GeneralSettings;
+use PHLAK\SemVer\Exceptions\InvalidVersionException;
+use PHLAK\SemVer\Version;
 
 function getSettings($key)
 {
@@ -25,4 +27,15 @@ function getSelected(): string
     } else {
         return 'tab_one';
     }
+}
+
+/**
+ * @throws InvalidVersionException
+ */
+function getAppVersion($tag = null): Version
+{
+    $semver = new PHLAK\SemVer\Version();
+    $version = $tag ?? 'v0.1.0';
+    $semver->setVersion($version);
+    return $semver;
 }

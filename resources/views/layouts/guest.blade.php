@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'dashcode') }}</title>
+    <title>{{ config('app.name', 'SIKS-DINSOS') }}</title>
     <x-favicon />
     {{-- Scripts --}}
     @vite(['resources/css/app.scss', 'resources/js/custom/store.js'])
@@ -19,20 +19,21 @@
                 <div class="mb-6">
                     <x-application-logo />
                 </div>
-                <h4>
-                    {{ __('SIKS-DINSOS') }}
-                </h4>
-                <p>
-                     <span class="text-slate-800 dark:text-slate-400 font-bold">
-                        v{{ config('version.string') }}
-                    </span>
+                <h5>
+                    {{ __('Sistem Informasi Kesejahteraan Sosial') }}
+                </h5>
+                <p class='text-slate-900 dark:text-slate-400 font-semibold'>
+                    {{ __('Dinas Sosial Kabupaten Soppeng') }}
+                </p>
+                <p class="text-slate-900 dark:text-slate-400 text-[14px]">
+                    {{ config('version.string') }}
                 </p>
             </div>
             <div class="absolute left-0 2xl:bottom-[-160px] bottom-[-130px] h-full w-full z-[-1]">
-                <img class="h-full w-full object-containll" src="{{ getSettings('guestBackground') }}" alt="image">
+                <img class="h-full w-full object-contain" src="{{ getSettings('guestBackground') }}" alt="image">
             </div>
         </div>
-        <div class="right-column  relative">
+        <div class="right-column relative">
             <div class="inner-content h-full flex flex-col bg-white dark:bg-slate-800">
                 {{ $slot }}
                 <div class="auth-footer text-center">
@@ -41,6 +42,7 @@
                         document.write(new Date().getFullYear())
                     </script>
                     , <a href="#">{{ __('Dashcode') }}</a>
+                    {{ config('version.tag') }}
                     {{ __('All Rights Reserved.') }}
                 </div>
             </div>

@@ -15,13 +15,19 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements MustVerifyEmail, HasMedia
+class User extends Authenticatable implements HasMedia, MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles, MustVerifyNewEmail, InteractsWithMedia, Versionable;
+    use HasApiTokens;
+    use HasFactory;
+    use HasRoles;
+    use InteractsWithMedia;
+    use MustVerifyNewEmail;
+    use Notifiable;
 
-    protected $versionable = ['title', 'content'];
+    //    use Sushi;
+    use Versionable;
 
-//    protected $guarded = ['sanctum', 'web'];
+    protected $versionable = ['name', 'email', 'phone'];
 
     /**
      * The attributes that are mass assignable.
@@ -70,8 +76,6 @@ class User extends Authenticatable implements MustVerifyEmail, HasMedia
 
     /**
      * Local scope to exclude auth user
-     * @param $query
-     * @return mixed
      */
     public function scopeWithoutAuthUser($query): mixed
     {
@@ -80,12 +84,9 @@ class User extends Authenticatable implements MustVerifyEmail, HasMedia
 
     /**
      * Local scope to exclude super admin
-     * @param $query
-     * @return mixed
      */
     public function scopeWithoutSuperAdmin($query): mixed
     {
         return $query->where('id', '!=', 1);
     }
-
 }

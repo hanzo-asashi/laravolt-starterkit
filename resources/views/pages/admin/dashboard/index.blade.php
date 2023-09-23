@@ -1,5 +1,114 @@
-<x-app-layout>
+<?php
+declare(strict_types=1);
 
+use App\Models\User;
+use function Laravel\Folio\name;
+use function Laravel\Folio\render;
+use function Livewire\Volt\state;
+
+//const COMPANY = 'Biffco Enterprises Ltd.';
+//
+//const COMPANY_EMAIL = 'Biffco@biffco.com';
+//
+//const CUSTOMER_NAME = 'Danniel Smith';
+//
+//const CUSTOMER_PHOTO = '/images/customer.png';
+
+name('dashboard.index');
+
+$breadcrumbsItems = [
+    [
+        'name' => 'Dashboard',
+        'url' => '/',
+        'active' => true,
+    ],
+];
+
+$chartData = [
+    'yearlyRevenue' => [
+        'year' => [1991, 1992, 1993, 1994, 1995],
+        'revenue' => [350, 500, 950, 700, 900],
+        'total' => 3500,
+        'currencySymbol' => '$',
+    ],
+    'productSold' => [
+        'year' => [1991, 1992, 1993, 1994, 1995],
+        'quantity' => [800, 600, 1000, 800, 900],
+        'total' => 4000,
+    ],
+    'growth' => [
+        'year' => [1991, 1992, 1993, 1994, 1995],
+        'perYearRate' => [10, 20, 30, 40, 100],
+        'total' => 10,
+        'preSymbol' => '+',
+        'postSymbol' => '%',
+    ],
+    'revenueReport' => [
+        'month' => ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+        'revenue' => [
+            'title' => 'Revenue',
+            'data' => [76, 85, 101, 98, 87, 105, 91, 114, 94],
+        ],
+        'netProfit' => [
+            'title' => 'Net Profit',
+            'data' => [35, 41, 36, 26, 45, 48, 52, 53, 41],
+        ],
+        'cashFlow' => [
+            'title' => 'Cash Flow',
+            'data' => [44, 55, 57, 56, 61, 58, 63, 60, 66],
+        ],
+    ],
+    'productGrowthOverview' => [
+        'productNames' => ['Books', 'Pens', 'Pencils', 'Box'],
+        'data' => [88, 77, 66, 55],
+    ],
+    'thisYearGrowth' => [
+        'label' => ['Yearly Growth'],
+        'data' => [66],
+    ],
+    'investmentAmount' => [
+        [
+            'title' => 'Investment',
+            'amount' => 1000,
+            'currencySymbol' => '$',
+            'profit' => 10,
+            'profitPercentage' => 50,
+            'loss' => 0,
+            'lossPercentage' => 0,
+        ],
+        [
+            'title' => 'Investment',
+            'amount' => 1000,
+            'currencySymbol' => '$',
+            'profit' => 10,
+            'profitPercentage' => 50,
+            'loss' => 0,
+            'lossPercentage' => 0,
+        ],
+        [
+            'title' => 'Investment',
+            'amount' => 1000,
+            'currencySymbol' => '$',
+            'profit' => 0,
+            'profitPercentage' => 0,
+            'loss' => 20,
+            'lossPercentage' => 30,
+        ],
+    ],
+    'users' => User::latest()->paginate(5),
+];
+
+//render(function (\Illuminate\View\View $view, User $user) {
+//    return $view->with([
+//        'pageTitle' => 'Blank Page',
+//        'data' => $this->chartData,
+//        'breadcrumbItems' => $this->breadcrumbsItems
+//    ]);
+//});
+?>
+
+<x-app-layout>
+    @volt
     <!-- START:: Breadcrumbs -->
     <div class="flex justify-between flex-wrap items-center mb-6">
         <h4 class="font-medium lg:text-2xl text-xl capitalize text-slate-900
@@ -29,7 +138,7 @@
     <div class="grid grid-cols-12 gap-5 mb-5">
         <div class="2xl:col-span-3 lg:col-span-4 col-span-12">
             <div class="bg-no-repeat bg-cover bg-center p-4
-             rounded-[6px] relative" style="background-image: url(images/all-img/widget-bg-1.png)">
+             rounded-[6px] relative" style="background-image: url({{ asset('images/all-img/widget-bg-1.png') }})">
                 <div class="max-w-[180px]">
                     <div class="text-xl font-medium text-slate-900 mb-2">
                         Upgrade your Dashcode
@@ -219,6 +328,7 @@
                                     </thead>
                                     <tbody class="bg-white divide-y divide-slate-100
                                      dark:bg-slate-800 dark:divide-slate-700">
+                                    @dd($data['users'])
                                     @foreach($data['users'] as $user)
                                         <tr>
                                             <td class="table-td">
@@ -538,6 +648,8 @@
 
     </div>
 
+    @endvolt
+
     @push('scripts')
         @vite(['resources/js/plugins/jquery-jvectormap-2.0.5.min.js'])
         @vite(['resources/js/plugins/jquery-jvectormap-world-mill-en.js'])
@@ -551,10 +663,10 @@
 
                 regionStyle: {
                     initial: { fill: '#8092FF' },
-                    hover: { fill: '#4669fa', 'fill-opacity': 1 },
+                    hover: { fill: '#4669fa', 'fill-opacity': 1 }
                 },
 
-                backgroundColor: 'transparent',
+                backgroundColor: 'transparent'
             })
         </script>
     @endpush

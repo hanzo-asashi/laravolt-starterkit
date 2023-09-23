@@ -2,17 +2,19 @@
     <div class="space-y-5 profile-page">
         <div class="profiel-wrap px-[35px] pb-10 md:pt-[84px] pt-10 rounded-lg bg-white dark:bg-slate-800 lg:flex lg:space-y-0
                 space-y-6 justify-between items-end relative z-[1]">
-            <div class="bg-slate-900 dark:bg-slate-700 absolute left-0 top-0 md:h-1/2 h-[150px] w-full z-[-1] rounded-t-lg"></div>
+            <div
+                class="bg-slate-900 dark:bg-slate-700 absolute left-0 top-0 md:h-1/2 h-[150px] w-full z-[-1] rounded-t-lg"></div>
             <div class="profile-box flex-none md:text-start text-center">
                 <div class="md:flex items-end md:space-x-6 rtl:space-x-reverse">
                     <div class="flex-none">
                         <div class="md:h-[186px] md:w-[186px] h-[140px] w-[140px] md:ml-0 md:mr-0 ml-auto mr-auto md:mb-0 mb-4 rounded-full ring-4
                                 ring-slate-100 relative">
                             <img src="{{ auth()->user()->getFirstMediaUrl('profile-image') ?:
-                            Avatar::create(auth()->user()->name)->setDimension(400)->setFontSize(240)->toBase64() }}" alt=""
+                            Avatar::create(auth()->user()->name)->setDimension(400)->setFontSize(240)->toBase64() }}"
+                                 alt=""
                                  class="w-full h-full object-cover rounded-full">
                             <a
-                                href="profile-setting"
+                                href="{{ route('profiles.index') }}"
                                 class="absolute right-2 h-8 w-8 bg-slate-50 text-slate-600 rounded-full shadow-sm flex flex-col items-center
                                     justify-center md:top-[140px] top-[100px]">
                                 <iconify-icon icon="heroicons:pencil-square"></iconify-icon>
@@ -42,10 +44,10 @@
                 <!-- end single -->
                 <div class="flex-1">
                     <div class="text-base text-slate-900 dark:text-slate-300 font-medium mb-1">
-                        200
+                        {{ auth()->user()->permissions()->count() }}
                     </div>
                     <div class="text-sm text-slate-600 font-light dark:text-slate-300">
-                        Board Card
+                        Permissions
                     </div>
                 </div>
                 <!-- end single -->
@@ -74,10 +76,12 @@
                                     <iconify-icon icon="heroicons:envelope"></iconify-icon>
                                 </div>
                                 <div class="flex-1">
-                                    <div class="uppercase text-xs text-slate-500 dark:text-slate-300 mb-1 leading-[12px]">
+                                    <div
+                                        class="uppercase text-xs text-slate-500 dark:text-slate-300 mb-1 leading-[12px]">
                                         EMAIL
                                     </div>
-                                    <a href="mailto:{{ auth()->user()->email ?: 'N/A' }}" class="text-base text-slate-600 dark:text-slate-50">
+                                    <a href="mailto:{{ auth()->user()->email ?: 'N/A' }}"
+                                       class="text-base text-slate-600 dark:text-slate-50">
                                         {{ auth()->user()->email ?: 'N/A' }}
                                     </a>
                                 </div>
@@ -88,10 +92,12 @@
                                     <iconify-icon icon="heroicons:phone-arrow-up-right"></iconify-icon>
                                 </div>
                                 <div class="flex-1">
-                                    <div class="uppercase text-xs text-slate-500 dark:text-slate-300 mb-1 leading-[12px]">
+                                    <div
+                                        class="uppercase text-xs text-slate-500 dark:text-slate-300 mb-1 leading-[12px]">
                                         PHONE
                                     </div>
-                                    <a href="{{ auth()->user()->phone }}" class="text-base text-slate-600 dark:text-slate-50">
+                                    <a href="{{ auth()->user()->phone }}"
+                                       class="text-base text-slate-600 dark:text-slate-50">
                                         {{ auth()->user()->phone ?: 'N/A' }}
                                     </a>
                                 </div>
@@ -102,7 +108,8 @@
                                     <iconify-icon icon="heroicons:map"></iconify-icon>
                                 </div>
                                 <div class="flex-1">
-                                    <div class="uppercase text-xs text-slate-500 dark:text-slate-300 mb-1 leading-[12px]">
+                                    <div
+                                        class="uppercase text-xs text-slate-500 dark:text-slate-300 mb-1 leading-[12px]">
                                         LOCATION
                                     </div>
                                     <div class="text-base text-slate-600 dark:text-slate-50 break-words">

@@ -8,10 +8,8 @@ class UpdateProfileRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
-     *
-     * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
@@ -21,11 +19,11 @@ class UpdateProfileRequest extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email:rfc,dns', 'max:255', 'unique:users,email,'.auth()->id()],
+            'email' => ['required', 'string', 'max:255', 'unique:users,email,' . auth()->id()],
             'phone' => ['nullable', 'string', 'max:255'],
             'post_code' => ['nullable', 'string', 'max:255'],
             'city' => ['nullable', 'string', 'max:255'],

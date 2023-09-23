@@ -7,9 +7,11 @@ use App\Models\User;
 class HomeController extends Controller
 {
     const COMPANY = 'Biffco Enterprises Ltd.';
+
     const COMPANY_EMAIL = 'Biffco@biffco.com';
 
     const CUSTOMER_NAME = 'Danniel Smith';
+
     const CUSTOMER_PHOTO = '/images/customer.png';
 
     /**
@@ -17,11 +19,12 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         $breadcrumbsItems = [
             [
                 'name' => 'Home',
                 'url' => '/',
-                'active' => true
+                'active' => true,
             ],
         ];
 
@@ -94,7 +97,7 @@ class HomeController extends Controller
                     'profitPercentage' => 0,
                     'loss' => 20,
                     'lossPercentage' => 30,
-                ]
+                ],
             ],
             'users' => User::latest()->paginate(5),
         ];
@@ -102,7 +105,7 @@ class HomeController extends Controller
         return view('dashboard', [
             'pageTitle' => 'Blank Page',
             'data' => $chartData,
-            'breadcrumbItems' => $breadcrumbsItems
+            'breadcrumbItems' => $breadcrumbsItems,
         ]);
     }
 
@@ -130,7 +133,7 @@ class HomeController extends Controller
     {
         return [
             'revenueReport' => [
-                'month' => ["Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
+                'month' => ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
                 'revenue' => [
                     'title' => 'Revenue',
                     'data' => [76, 85, 101, 98, 87, 105, 91, 114, 94],
@@ -177,7 +180,7 @@ class HomeController extends Controller
                 'preSymbol' => '+',
             ],
             'lastWeekOverview' => [
-                'labels' => ["Success", "Return"],
+                'labels' => ['Success', 'Return'],
                 'data' => [60, 40],
                 'title' => 'Profit',
                 'amount' => '650k+',

@@ -18,24 +18,29 @@
                 <div class="justify-end flex gap-3 items-center flex-wrap">
                     {{-- Create Button start--}}
                     @can('user create')
-                        <a class="btn inline-flex justify-center btn-dark rounded-[25px] items-center !p-2 !px-3" href="{{ route('users.create') }}">
+                        <a class="btn inline-flex justify-center btn-dark rounded-[25px] items-center !p-2 !px-3"
+                           href="{{ route('users.create') }}">
                             <iconify-icon icon="ic:round-plus" class="text-lg mr-1">
                             </iconify-icon>
                             {{ __('New') }}
                         </a>
                     @endcan
                     {{--Refresh Button start--}}
-                    <a class="btn inline-flex justify-center btn-dark rounded-[25px] items-center !p-2.5" href="{{ route('users.index') }}">
+                    <a class="btn inline-flex justify-center btn-dark rounded-[25px] items-center !p-2.5"
+                       href="{{ route('users.index') }}">
                         <iconify-icon icon="mdi:refresh" class="text-xl "></iconify-icon>
                     </a>
                 </div>
                 <div class="justify-center flex flex-wrap sm:flex items-center lg:justify-end gap-3">
                     <div class="relative w-full sm:w-auto flex items-center">
                         <form id="searchForm" method="get" action="{{ route('users.index') }}">
-                            <input name="q" type="text" class="inputField pl-8 p-2 border border-slate-200 dark:border-slate-700 rounded-md dark:bg-slate-900"
+                            <input name="q" type="text"
+                                   class="inputField pl-8 p-2 border border-slate-200 dark:border-slate-700
+                                    rounded-md dark:bg-slate-900"
                                    placeholder="Search" value="{{ request()->q }}">
                         </form>
-                        <iconify-icon class="absolute text-textColor left-2 dark:text-white" icon="quill:search-alt"></iconify-icon>
+                        <iconify-icon class="absolute text-textColor left-2 dark:text-white"
+                                      icon="quill:search-alt"></iconify-icon>
                     </div>
                 </div>
             </header>
@@ -66,7 +71,8 @@
                                     </th>
                                 </tr>
                                 </thead>
-                                <tbody class="bg-white divide-y divide-slate-100 dark:bg-slate-800 dark:divide-slate-700">
+                                <tbody
+                                    class="bg-white divide-y divide-slate-100 dark:bg-slate-800 dark:divide-slate-700">
                                 @forelse ($users as $user)
                                     <tr>
                                         <td class="table-td">
@@ -77,7 +83,8 @@
                                                 <div class="flex-none">
                                                     <div class="w-8 h-8 rounded-[100%] ltr:mr-3 rtl:ml-3">
                                                         <img class="w-full h-full rounded-[100%] object-cover"
-                                                             src="{{ Avatar::create($user->name)->toBase64() }}" alt="image">
+                                                             src="{{ Avatar::create($user->name)->toBase64() }}"
+                                                             alt="image">
                                                     </div>
                                                 </div>
                                                 <div class="flex-1 text-start">
@@ -95,9 +102,15 @@
                                         </td>
                                         <td class="table-td">
                                             @if($user->email_verified_at)
-                                                <span class="badge bg-primary-500 text-white capitalize">{{ __('YES') }}</span>
+                                                <span
+                                                    class="badge bg-primary-500 text-white capitalize">
+                                                    {{ __('YES') }}
+                                                </span>
                                             @else
-                                                <span class="badge bg-danger-500 text-white capitalize">{{ __('NO') }}</span>
+                                                <span
+                                                    class="badge bg-danger-500 text-white capitalize">
+                                                    {{ __('NO') }}
+                                                </span>
                                             @endif
                                         </td>
                                         <td class="table-td">
@@ -110,16 +123,20 @@
                                                 @endcan
                                                 {{--Edit--}}
                                                 @can('user update')
-                                                    <a class="action-btn" href="{{ route('users.edit', ['user'=>$user]) }}">
+                                                    <a class="action-btn"
+                                                       href="{{ route('users.edit', ['user'=>$user]) }}">
                                                         <iconify-icon icon="heroicons:pencil-square"></iconify-icon>
                                                     </a>
                                                 @endcan
                                                 {{--delete--}}
                                                 @can('user delete')
-                                                    <form id="deleteForm{{ $user->id }}" method="POST" action="{{ route('users.destroy', $user) }}">
+                                                    <form id="deleteForm{{ $user->id }}" method="POST"
+                                                          action="{{ route('users.destroy', $user) }}">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <a class="action-btn cursor-pointer" onclick="sweetAlertDelete(event, 'deleteForm{{ $user->id }}')"
+                                                        <a class="action-btn cursor-pointer"
+                                                           onclick="sweetAlertDelete(event,
+                                                            'deleteForm{{ $user->id }}')"
                                                            type="submit">
                                                             <iconify-icon icon="heroicons:trash"></iconify-icon>
                                                         </a>
@@ -131,8 +148,11 @@
                                 @empty
                                     <tr class="border border-slate-100 dark:border-slate-900 relative">
                                         <td class="table-cell text-center" colspan="5">
-                                            <img src="images/result-not-found.svg" alt="page not found" class="w-64 m-auto" />
-                                            <h2 class="text-xl text-slate-700 mb-8 -mt-4">{{ __('No results found.') }}</h2>
+                                            <img src="{{ asset('images/result-not-found.svg') }}" alt="page not found"
+                                                 class="w-64 m-auto" />
+                                            <h2 class="text-xl text-slate-700 mb-8 -mt-4">
+                                                {{ __('No results found.') }}
+                                            </h2>
                                         </td>
                                     </tr>
                                 @endforelse

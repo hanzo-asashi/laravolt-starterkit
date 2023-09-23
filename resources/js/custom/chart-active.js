@@ -1,6 +1,6 @@
 ;(function ($) {
-  const isDark = localStorage.theme === 'dark' ? true : false
-  const isRtl = localStorage.dir === 'rtl' ? true : false
+  const isDark = localStorage.theme === 'dark'
+  const isRtl = localStorage.dir === 'rtl'
 
   function generateData(baseval, count, yrange) {
     var i = 0
@@ -32,7 +32,7 @@
     'dark-gray': '#0F172A',
     gray: '#68768A',
     gray2: '#EEF1F9',
-    'dark-light': '#CBD5E1',
+    'dark-light': '#CBD5E1'
   }
 
   const hexToRGB = (hex, alpha) => {
@@ -59,30 +59,30 @@
 
           type: 'area',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [
           {
-            data: [90, 70, 85, 60, 80, 70, 90, 75, 60, 80],
-          },
+            data: [90, 70, 85, 60, 80, 70, 90, 75, 60, 80]
+          }
         ],
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 4,
+          width: 4
         },
         colors: ['#4669FA'],
         tooltip: {
-          theme: 'dark',
+          theme: 'dark'
         },
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#e2e8f0',
           strokeDashArray: 10,
-          position: 'back',
+          position: 'back'
         },
         fill: {
           type: 'gradient',
@@ -91,16 +91,16 @@
             shadeIntensity: 1,
             opacityFrom: 0.4,
             opacityTo: 0.5,
-            stops: [50, 100, 0],
-          },
+            stops: [50, 100, 0]
+          }
         },
         yaxis: {
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         xaxis: {
           categories: [
@@ -115,28 +115,28 @@
             'Sep',
             'Oct',
             'Nov',
-            'Dec',
+            'Dec'
           ],
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
         padding: {
           top: 0,
           right: 0,
           bottom: 0,
-          left: 0,
-        },
-      },
+          left: 0
+        }
+      }
     },
     {
       id: 'areaSpaline',
@@ -145,37 +145,37 @@
           height: 350,
           type: 'area',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [
           {
-            data: [31, 40, 28, 51, 42, 109, 100],
+            data: [31, 40, 28, 51, 42, 109, 100]
           },
           {
-            data: [11, 32, 45, 32, 34, 52, 41],
-          },
+            data: [11, 32, 45, 32, 34, 52, 41]
+          }
         ],
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 2,
+          width: 2
         },
         yaxis: {
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#e2e8f0',
           strokeDashArray: 10,
-          position: 'back',
+          position: 'back'
         },
         xaxis: {
           type: 'datetime',
@@ -186,33 +186,33 @@
             '2018-09-19T03:30:00.000Z',
             '2018-09-19T04:30:00.000Z',
             '2018-09-19T05:30:00.000Z',
-            '2018-09-19T06:30:00.000Z',
+            '2018-09-19T06:30:00.000Z'
           ],
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
         legend: {
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
+            colors: isDark ? '#CBD5E1' : '#475569'
           },
-          fontFamily: 'Inter',
+          fontFamily: 'Inter'
         },
         tooltip: {
           x: {
-            format: 'dd/MM/yy HH:mm',
-          },
-        },
-      },
+            format: 'dd/MM/yy HH:mm'
+          }
+        }
+      }
     },
     {
       id: 'basicBarChart',
@@ -221,35 +221,35 @@
           height: 350,
           type: 'bar',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [
           {
-            data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
-          },
+            data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+          }
         ],
         plotOptions: {
           bar: {
-            horizontal: true,
-          },
+            horizontal: true
+          }
         },
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         yaxis: {
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#e2e8f0',
           strokeDashArray: 10,
-          position: 'back',
+          position: 'back'
         },
         xaxis: {
           categories: [
@@ -262,23 +262,23 @@
             'Japan',
             'United States',
             'China',
-            'Germany',
+            'Germany'
           ],
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
-        colors: ['#4669FA'],
-      },
+        colors: ['#4669FA']
+      }
     },
     {
       id: 'columnChart',
@@ -288,42 +288,42 @@
 
           type: 'bar',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [
           {
             name: 'Net Profit',
-            data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+            data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
           },
           {
             name: 'Revenue',
-            data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+            data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
           },
           {
             name: 'Free Cash Flow',
-            data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
-          },
+            data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+          }
         ],
         plotOptions: {
           bar: {
             horizontal: false,
             endingShape: 'rounded',
-            columnWidth: '55%',
-          },
+            columnWidth: '55%'
+          }
         },
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           show: true,
           width: 10,
-          colors: ['transparent'],
+          colors: ['transparent']
         },
         legend: {
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
-          },
+            colors: isDark ? '#CBD5E1' : '#475569'
+          }
         },
 
         xaxis: {
@@ -336,50 +336,50 @@
             'Jul',
             'Aug',
             'Sep',
-            'Oct',
+            'Oct'
           ],
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
         yaxis: {
           title: {
-            text: '$ (thousands)',
+            text: '$ (thousands)'
           },
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         fill: {
-          opacity: 1,
+          opacity: 1
         },
         tooltip: {
           y: {
             formatter: function (val) {
               return '$ ' + val + ' thousands'
-            },
-          },
+            }
+          }
         },
 
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#e2e8f0',
-          position: 'back',
+          position: 'back'
         },
-        colors: ['#4669FA', '#0CE7FA', '#FA916B'],
-      },
+        colors: ['#4669FA', '#0CE7FA', '#FA916B']
+      }
     },
     {
       id: 'scatterChart',
@@ -389,11 +389,11 @@
           type: 'scatter',
           zoom: {
             enabled: true,
-            type: 'xy',
+            type: 'xy'
           },
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [
           {
@@ -410,8 +410,8 @@
               [10.0, 190],
               [11.0, 220],
               [12.0, 170],
-              [13.0, 230],
-            ],
+              [13.0, 230]
+            ]
           },
           {
             name: 'B',
@@ -428,8 +428,8 @@
               [19.0, 280],
               [17.0, 280],
               [22.0, 300],
-              [18.0, 120],
-            ],
+              [18.0, 120]
+            ]
           },
           {
             name: 'C',
@@ -444,17 +444,17 @@
               [19.0, 400],
               [20.0, 200],
               [22.0, 90],
-              [20.0, 120],
-            ],
-          },
+              [20.0, 120]
+            ]
+          }
         ],
         grid: {
           borderColor: isDark ? '#334155' : '#e2e8f0',
           xaxis: {
             lines: {
-              show: true,
-            },
-          },
+              show: true
+            }
+          }
         },
         colors: ['#4669FA', '#FA916B', '#0CE7FA'],
         legend: {
@@ -462,36 +462,36 @@
           position: 'bottom',
           horizontalAlign: 'center',
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
-          },
+            colors: isDark ? '#CBD5E1' : '#475569'
+          }
         },
         xaxis: {
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
+            show: false
           },
           tickAmount: 10,
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
+              fontFamily: 'Inter'
             },
             formatter(val) {
               return parseFloat(val).toFixed(1)
-            },
-          },
+            }
+          }
         },
         yaxis: {
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
-        },
-      },
+              fontFamily: 'Inter'
+            }
+          }
+        }
+      }
     },
     {
       id: 'bubbleChart',
@@ -500,50 +500,50 @@
           height: 350,
           type: 'bubble',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [
           {
             name: 'Product1',
             data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
               min: 10,
-              max: 60,
-            }),
+              max: 60
+            })
           },
           {
             name: 'Product2',
             data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
               min: 10,
-              max: 60,
-            }),
+              max: 60
+            })
           },
           {
             name: 'Product3',
             data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
               min: 10,
-              max: 60,
-            }),
+              max: 60
+            })
           },
           {
             name: 'Product4',
             data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
               min: 10,
-              max: 60,
-            }),
-          },
+              max: 60
+            })
+          }
         ],
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
 
         fill: {
-          type: 'gradient',
+          type: 'gradient'
         },
         legend: {
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
-          },
+            colors: isDark ? '#CBD5E1' : '#475569'
+          }
         },
 
         xaxis: {
@@ -554,20 +554,20 @@
             rotate: 0,
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#e2e8f0',
-          position: 'back',
+          position: 'back'
         },
 
         yaxis: {
@@ -575,15 +575,15 @@
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         theme: {
-          palette: 'palette2',
+          palette: 'palette2'
         },
-        colors: ['#4669FA', '#FA916B', '#50C793', '#0CE7FA'],
-      },
+        colors: ['#4669FA', '#FA916B', '#50C793', '#0CE7FA']
+      }
     },
     {
       id: 'candlestickChart',
@@ -592,262 +592,262 @@
           height: 350,
           type: 'candlestick',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [
           {
             data: [
               {
                 x: new Date(1538778600000),
-                y: [6629.81, 6650.5, 6623.04, 6633.33],
+                y: [6629.81, 6650.5, 6623.04, 6633.33]
               },
               {
                 x: new Date(1538780400000),
-                y: [6632.01, 6643.59, 6620, 6630.11],
+                y: [6632.01, 6643.59, 6620, 6630.11]
               },
               {
                 x: new Date(1538782200000),
-                y: [6630.71, 6648.95, 6623.34, 6635.65],
+                y: [6630.71, 6648.95, 6623.34, 6635.65]
               },
               {
                 x: new Date(1538784000000),
-                y: [6635.65, 6651, 6629.67, 6638.24],
+                y: [6635.65, 6651, 6629.67, 6638.24]
               },
               {
                 x: new Date(1538785800000),
-                y: [6638.24, 6640, 6620, 6624.47],
+                y: [6638.24, 6640, 6620, 6624.47]
               },
               {
                 x: new Date(1538787600000),
-                y: [6624.53, 6636.03, 6621.68, 6624.31],
+                y: [6624.53, 6636.03, 6621.68, 6624.31]
               },
               {
                 x: new Date(1538789400000),
-                y: [6624.61, 6632.2, 6617, 6626.02],
+                y: [6624.61, 6632.2, 6617, 6626.02]
               },
               {
                 x: new Date(1538791200000),
-                y: [6627, 6627.62, 6584.22, 6603.02],
+                y: [6627, 6627.62, 6584.22, 6603.02]
               },
               {
                 x: new Date(1538793000000),
-                y: [6605, 6608.03, 6598.95, 6604.01],
+                y: [6605, 6608.03, 6598.95, 6604.01]
               },
               {
                 x: new Date(1538794800000),
-                y: [6604.5, 6614.4, 6602.26, 6608.02],
+                y: [6604.5, 6614.4, 6602.26, 6608.02]
               },
               {
                 x: new Date(1538796600000),
-                y: [6608.02, 6610.68, 6601.99, 6608.91],
+                y: [6608.02, 6610.68, 6601.99, 6608.91]
               },
               {
                 x: new Date(1538798400000),
-                y: [6608.91, 6618.99, 6608.01, 6612],
+                y: [6608.91, 6618.99, 6608.01, 6612]
               },
               {
                 x: new Date(1538800200000),
-                y: [6612, 6615.13, 6605.09, 6612],
+                y: [6612, 6615.13, 6605.09, 6612]
               },
               {
                 x: new Date(1538802000000),
-                y: [6612, 6624.12, 6608.43, 6622.95],
+                y: [6612, 6624.12, 6608.43, 6622.95]
               },
               {
                 x: new Date(1538803800000),
-                y: [6623.91, 6623.91, 6615, 6615.67],
+                y: [6623.91, 6623.91, 6615, 6615.67]
               },
               {
                 x: new Date(1538805600000),
-                y: [6618.69, 6618.74, 6610, 6610.4],
+                y: [6618.69, 6618.74, 6610, 6610.4]
               },
               {
                 x: new Date(1538807400000),
-                y: [6611, 6622.78, 6610.4, 6614.9],
+                y: [6611, 6622.78, 6610.4, 6614.9]
               },
               {
                 x: new Date(1538809200000),
-                y: [6614.9, 6626.2, 6613.33, 6623.45],
+                y: [6614.9, 6626.2, 6613.33, 6623.45]
               },
               {
                 x: new Date(1538811000000),
-                y: [6623.48, 6627, 6618.38, 6620.35],
+                y: [6623.48, 6627, 6618.38, 6620.35]
               },
               {
                 x: new Date(1538812800000),
-                y: [6619.43, 6620.35, 6610.05, 6615.53],
+                y: [6619.43, 6620.35, 6610.05, 6615.53]
               },
               {
                 x: new Date(1538814600000),
-                y: [6615.53, 6617.93, 6610, 6615.19],
+                y: [6615.53, 6617.93, 6610, 6615.19]
               },
               {
                 x: new Date(1538816400000),
-                y: [6615.19, 6621.6, 6608.2, 6620],
+                y: [6615.19, 6621.6, 6608.2, 6620]
               },
               {
                 x: new Date(1538818200000),
-                y: [6619.54, 6625.17, 6614.15, 6620],
+                y: [6619.54, 6625.17, 6614.15, 6620]
               },
               {
                 x: new Date(1538820000000),
-                y: [6620.33, 6634.15, 6617.24, 6624.61],
+                y: [6620.33, 6634.15, 6617.24, 6624.61]
               },
               {
                 x: new Date(1538821800000),
-                y: [6625.95, 6626, 6611.66, 6617.58],
+                y: [6625.95, 6626, 6611.66, 6617.58]
               },
               {
                 x: new Date(1538823600000),
-                y: [6619, 6625.97, 6595.27, 6598.86],
+                y: [6619, 6625.97, 6595.27, 6598.86]
               },
               {
                 x: new Date(1538825400000),
-                y: [6598.86, 6598.88, 6570, 6587.16],
+                y: [6598.86, 6598.88, 6570, 6587.16]
               },
               {
                 x: new Date(1538827200000),
-                y: [6588.86, 6600, 6580, 6593.4],
+                y: [6588.86, 6600, 6580, 6593.4]
               },
               {
                 x: new Date(1538829000000),
-                y: [6593.99, 6598.89, 6585, 6587.81],
+                y: [6593.99, 6598.89, 6585, 6587.81]
               },
               {
                 x: new Date(1538830800000),
-                y: [6587.81, 6592.73, 6567.14, 6578],
+                y: [6587.81, 6592.73, 6567.14, 6578]
               },
               {
                 x: new Date(1538832600000),
-                y: [6578.35, 6581.72, 6567.39, 6579],
+                y: [6578.35, 6581.72, 6567.39, 6579]
               },
               {
                 x: new Date(1538834400000),
-                y: [6579.38, 6580.92, 6566.77, 6575.96],
+                y: [6579.38, 6580.92, 6566.77, 6575.96]
               },
               {
                 x: new Date(1538836200000),
-                y: [6575.96, 6589, 6571.77, 6588.92],
+                y: [6575.96, 6589, 6571.77, 6588.92]
               },
               {
                 x: new Date(1538838000000),
-                y: [6588.92, 6594, 6577.55, 6589.22],
+                y: [6588.92, 6594, 6577.55, 6589.22]
               },
               {
                 x: new Date(1538839800000),
-                y: [6589.3, 6598.89, 6589.1, 6596.08],
+                y: [6589.3, 6598.89, 6589.1, 6596.08]
               },
               {
                 x: new Date(1538841600000),
-                y: [6597.5, 6600, 6588.39, 6596.25],
+                y: [6597.5, 6600, 6588.39, 6596.25]
               },
               {
                 x: new Date(1538843400000),
-                y: [6598.03, 6600, 6588.73, 6595.97],
+                y: [6598.03, 6600, 6588.73, 6595.97]
               },
               {
                 x: new Date(1538845200000),
-                y: [6595.97, 6602.01, 6588.17, 6602],
+                y: [6595.97, 6602.01, 6588.17, 6602]
               },
               {
                 x: new Date(1538847000000),
-                y: [6602, 6607, 6596.51, 6599.95],
+                y: [6602, 6607, 6596.51, 6599.95]
               },
               {
                 x: new Date(1538848800000),
-                y: [6600.63, 6601.21, 6590.39, 6591.02],
+                y: [6600.63, 6601.21, 6590.39, 6591.02]
               },
               {
                 x: new Date(1538850600000),
-                y: [6591.02, 6603.08, 6591, 6591],
+                y: [6591.02, 6603.08, 6591, 6591]
               },
               {
                 x: new Date(1538852400000),
-                y: [6591, 6601.32, 6585, 6592],
+                y: [6591, 6601.32, 6585, 6592]
               },
               {
                 x: new Date(1538854200000),
-                y: [6593.13, 6596.01, 6590, 6593.34],
+                y: [6593.13, 6596.01, 6590, 6593.34]
               },
               {
                 x: new Date(1538856000000),
-                y: [6593.34, 6604.76, 6582.63, 6593.86],
+                y: [6593.34, 6604.76, 6582.63, 6593.86]
               },
               {
                 x: new Date(1538857800000),
-                y: [6593.86, 6604.28, 6586.57, 6600.01],
+                y: [6593.86, 6604.28, 6586.57, 6600.01]
               },
               {
                 x: new Date(1538859600000),
-                y: [6601.81, 6603.21, 6592.78, 6596.25],
+                y: [6601.81, 6603.21, 6592.78, 6596.25]
               },
               {
                 x: new Date(1538861400000),
-                y: [6596.25, 6604.2, 6590, 6602.99],
+                y: [6596.25, 6604.2, 6590, 6602.99]
               },
               {
                 x: new Date(1538863200000),
-                y: [6602.99, 6606, 6584.99, 6587.81],
+                y: [6602.99, 6606, 6584.99, 6587.81]
               },
               {
                 x: new Date(1538865000000),
-                y: [6587.81, 6595, 6583.27, 6591.96],
+                y: [6587.81, 6595, 6583.27, 6591.96]
               },
               {
                 x: new Date(1538866800000),
-                y: [6591.97, 6596.07, 6585, 6588.39],
+                y: [6591.97, 6596.07, 6585, 6588.39]
               },
               {
                 x: new Date(1538868600000),
-                y: [6587.6, 6598.21, 6587.6, 6594.27],
+                y: [6587.6, 6598.21, 6587.6, 6594.27]
               },
               {
                 x: new Date(1538870400000),
-                y: [6596.44, 6601, 6590, 6596.55],
+                y: [6596.44, 6601, 6590, 6596.55]
               },
               {
                 x: new Date(1538872200000),
-                y: [6598.91, 6605, 6596.61, 6600.02],
+                y: [6598.91, 6605, 6596.61, 6600.02]
               },
               {
                 x: new Date(1538874000000),
-                y: [6600.55, 6605, 6589.14, 6593.01],
+                y: [6600.55, 6605, 6589.14, 6593.01]
               },
               {
                 x: new Date(1538875800000),
-                y: [6593.15, 6605, 6592, 6603.06],
+                y: [6593.15, 6605, 6592, 6603.06]
               },
               {
                 x: new Date(1538877600000),
-                y: [6603.07, 6604.5, 6599.09, 6603.89],
+                y: [6603.07, 6604.5, 6599.09, 6603.89]
               },
               {
                 x: new Date(1538879400000),
-                y: [6604.44, 6604.44, 6600, 6603.5],
+                y: [6604.44, 6604.44, 6600, 6603.5]
               },
               {
                 x: new Date(1538881200000),
-                y: [6603.5, 6603.99, 6597.5, 6603.86],
+                y: [6603.5, 6603.99, 6597.5, 6603.86]
               },
               {
                 x: new Date(1538883000000),
-                y: [6603.85, 6605, 6600, 6604.07],
+                y: [6603.85, 6605, 6600, 6604.07]
               },
               {
                 x: new Date(1538884800000),
-                y: [6604.98, 6606, 6604.07, 6606],
-              },
-            ],
-          },
+                y: [6604.98, 6606, 6604.07, 6606]
+              }
+            ]
+          }
         ],
         plotOptions: {
           candlestick: {
             colors: {
               upward: '#4669FA',
-              downward: '#F1595C',
-            },
-          },
+              downward: '#F1595C'
+            }
+          }
         },
 
         xaxis: {
@@ -855,35 +855,35 @@
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
 
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#e2e8f0',
-          position: 'back',
+          position: 'back'
         },
         yaxis: {
           tooltip: {
-            enabled: true,
+            enabled: true
           },
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
-        colors: ['#000000'],
-      },
+        colors: ['#000000']
+      }
     },
     {
       id: 'steplineChart',
@@ -892,58 +892,58 @@
           height: 350,
           type: 'line',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [
           {
-            data: [34, 44, 54, 21, 12, 43, 33, 23, 66, 66, 58],
-          },
+            data: [34, 44, 54, 21, 12, 43, 33, 23, 66, 66, 58]
+          }
         ],
         stroke: {
-          curve: 'stepline',
+          curve: 'stepline'
         },
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         yaxis: {
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#e2e8f0',
-          position: 'back',
+          position: 'back'
         },
         legend: {
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
-          },
+            colors: isDark ? '#CBD5E1' : '#475569'
+          }
         },
         xaxis: {
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
         markers: {
           hover: {
-            sizeOffset: 4,
-          },
-        },
-      },
+            sizeOffset: 4
+          }
+        }
+      }
     },
     {
       id: 'stackedColumns',
@@ -954,27 +954,27 @@
           stacked: true,
           stackType: '100%',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [
           {
             name: 'PRODUCT A',
-            data: [44, 55, 41, 67, 22, 43, 21, 49],
+            data: [44, 55, 41, 67, 22, 43, 21, 49]
           },
           {
             name: 'PRODUCT B',
-            data: [13, 23, 20, 8, 13, 27, 33, 12],
+            data: [13, 23, 20, 8, 13, 27, 33, 12]
           },
           {
             name: 'PRODUCT C',
-            data: [11, 17, 15, 15, 21, 14, 15, 13],
-          },
+            data: [11, 17, 15, 15, 21, 14, 15, 13]
+          }
         ],
         plotOptions: {
           bar: {
-            columnWidth: '25%',
-          },
+            columnWidth: '25%'
+          }
         },
         responsive: [
           {
@@ -983,28 +983,28 @@
               legend: {
                 position: 'bottom',
                 offsetX: -10,
-                offsetY: 0,
-              },
-            },
-          },
+                offsetY: 0
+              }
+            }
+          }
         ],
         yaxis: {
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#e2e8f0',
-          position: 'back',
+          position: 'back'
         },
         legend: {
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
-          },
+            colors: isDark ? '#CBD5E1' : '#475569'
+          }
         },
         xaxis: {
           categories: [
@@ -1015,26 +1015,26 @@
             '2012 Q1',
             '2012 Q2',
             '2012 Q3',
-            '2012 Q4',
+            '2012 Q4'
           ],
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
         fill: {
-          opacity: 1,
+          opacity: 1
         },
-        colors: ['#4669FA', '#0CE7FA', '#FA916B'],
-      },
+        colors: ['#4669FA', '#0CE7FA', '#FA916B']
+      }
     },
     {
       id: 'pieChart',
@@ -1043,12 +1043,12 @@
           height: 450,
           type: 'pie',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
         dataLabels: {
-          enabled: true,
+          enabled: true
         },
         series: [44, 55, 13, 43, 22],
         colors: ['#4669FA', '#F1595C', '#50C793', '#0CE7FA', '#FA916B'],
@@ -1058,19 +1058,19 @@
           fontFamily: 'Inter',
           fontWeight: 400,
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
+            colors: isDark ? '#CBD5E1' : '#475569'
           },
           markers: {
             width: 6,
             height: 6,
             offsetY: -1,
             offsetX: -5,
-            radius: 12,
+            radius: 12
           },
           itemMargin: {
             horizontal: 10,
-            vertical: 0,
-          },
+            vertical: 0
+          }
         },
 
         responsive: [
@@ -1078,12 +1078,12 @@
             breakpoint: 480,
             options: {
               legend: {
-                position: 'bottom',
-              },
-            },
-          },
-        ],
-      },
+                position: 'bottom'
+              }
+            }
+          }
+        ]
+      }
     },
     {
       id: 'donutChart',
@@ -1092,13 +1092,13 @@
           height: 450,
           type: 'donut',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         labels: ['success', 'Return', 'Cancel'],
         series: [44, 55, 41],
         dataLabels: {
-          enabled: true,
+          enabled: true
         },
 
         colors: ['#50C793', '#F1595C', '#FBBF24'],
@@ -1108,8 +1108,8 @@
           fontFamily: 'Inter',
           fontWeight: 400,
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
-          },
+            colors: isDark ? '#CBD5E1' : '#475569'
+          }
         },
         plotOptions: {
           pie: {
@@ -1122,7 +1122,7 @@
                   fontSize: '26px',
                   fontWeight: 'bold',
                   fontFamily: 'Inter',
-                  color: isDark ? '#CBD5E1' : '#475569',
+                  color: isDark ? '#CBD5E1' : '#475569'
                 },
                 value: {
                   show: true,
@@ -1131,7 +1131,7 @@
                   formatter(val) {
                     // eslint-disable-next-line radix
                     return `${parseInt(val)}%`
-                  },
+                  }
                 },
                 total: {
                   show: true,
@@ -1140,11 +1140,11 @@
                   label: 'Total',
                   formatter() {
                     return '20%'
-                  },
-                },
-              },
-            },
-          },
+                  }
+                }
+              }
+            }
+          }
         },
 
         responsive: [
@@ -1152,12 +1152,12 @@
             breakpoint: 480,
             options: {
               legend: {
-                position: 'bottom',
-              },
-            },
-          },
-        ],
-      },
+                position: 'bottom'
+              }
+            }
+          }
+        ]
+      }
     },
     {
       id: 'mixedChart',
@@ -1167,36 +1167,36 @@
           height: 350,
           type: 'line',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
 
         series: [
           {
             name: 'Column',
             type: 'column',
-            data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30],
+            data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
           },
           {
             name: 'Area',
             type: 'area',
-            data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
+            data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
           },
           {
             name: 'Line',
             type: 'line',
-            data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39],
-          },
+            data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+          }
         ],
 
         stroke: {
           width: [0, 2, 5],
-          curve: 'smooth',
+          curve: 'smooth'
         },
         plotOptions: {
           bar: {
-            columnWidth: '50%',
-          },
+            columnWidth: '50%'
+          }
         },
 
         fill: {
@@ -1207,8 +1207,8 @@
             type: 'vertical',
             opacityFrom: 0.85,
             opacityTo: 0.55,
-            stops: [0, 100, 100, 100],
-          },
+            stops: [0, 100, 100, 100]
+          }
         },
         labels: [
           '01/01/2003',
@@ -1221,34 +1221,34 @@
           '08/01/2003',
           '09/01/2003',
           '10/01/2003',
-          '11/01/2003',
+          '11/01/2003'
         ],
         markers: {
-          size: 0,
+          size: 0
         },
         xaxis: {
           type: 'datetime',
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
         yaxis: {
           min: 0,
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         tooltip: {
           shared: true,
@@ -1259,21 +1259,21 @@
                 return y.toFixed(0) + ' views'
               }
               return y
-            },
-          },
+            }
+          }
         },
         legend: {
           labels: {
-            useSeriesColors: true,
-          },
+            useSeriesColors: true
+          }
         },
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#e2e8f0',
-          position: 'back',
+          position: 'back'
         },
-        colors: ['#4669FA', '#50C793', '#0CE7FA'],
-      },
+        colors: ['#4669FA', '#50C793', '#0CE7FA']
+      }
     },
     {
       id: 'radarChart',
@@ -1282,36 +1282,36 @@
           height: 450,
           type: 'radar',
           toolbar: {
-            show: false,
+            show: false
           },
           dropShadow: {
             enabled: false,
             blur: 8,
             left: 1,
             top: 1,
-            opacity: 0.2,
-          },
+            opacity: 0.2
+          }
         },
         series: [
           {
             name: 'Option A',
-            data: [41, 64, 81, 60, 42, 42, 33, 23],
+            data: [41, 64, 81, 60, 42, 42, 33, 23]
           },
           {
             name: 'Option B',
-            data: [65, 46, 42, 25, 58, 63, 76, 43],
-          },
+            data: [65, 46, 42, 25, 58, 63, 76, 43]
+          }
         ],
         legend: {
           show: true,
           fontSize: '14px',
           fontFamily: 'Inter',
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
-          },
+            colors: isDark ? '#CBD5E1' : '#475569'
+          }
         },
         yaxis: {
-          show: false,
+          show: false
         },
         //colors: [chartColors.donut.series1, chartColors.donut.series3],
         xaxis: {
@@ -1323,23 +1323,23 @@
             'Storage',
             'Display',
             'OS',
-            'Price',
-          ],
+            'Price'
+          ]
         },
         fill: {
-          opacity: [1, 0.8],
+          opacity: [1, 0.8]
         },
         stroke: {
           show: false,
-          width: 0,
+          width: 0
         },
         markers: {
-          size: 0,
+          size: 0
         },
         grid: {
-          show: false,
-        },
-      },
+          show: false
+        }
+      }
     },
     {
       id: 'radialbars',
@@ -1348,8 +1348,8 @@
           height: 450,
           type: 'radialBar',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [44, 55, 67, 83],
         plotOptions: {
@@ -1357,11 +1357,11 @@
             dataLabels: {
               name: {
                 fontSize: '22px',
-                color: isDark ? '#CBD5E1' : '#475569',
+                color: isDark ? '#CBD5E1' : '#475569'
               },
               value: {
                 fontSize: '16px',
-                color: isDark ? '#CBD5E1' : '#475569',
+                color: isDark ? '#CBD5E1' : '#475569'
               },
               total: {
                 show: true,
@@ -1369,18 +1369,18 @@
                 color: isDark ? '#CBD5E1' : '#475569',
                 formatter: function () {
                   return 249
-                },
-              },
+                }
+              }
             },
             track: {
               background: '#E2E8F0',
-              strokeWidth: '97%',
-            },
-          },
+              strokeWidth: '97%'
+            }
+          }
         },
         labels: ['A', 'B', 'C', 'D'],
-        colors: ['#4669FA', '#FA916B', '#50C793', '#0CE7FA'],
-      },
+        colors: ['#4669FA', '#FA916B', '#50C793', '#0CE7FA']
+      }
     },
     {
       id: 'spae-line1',
@@ -1391,49 +1391,49 @@
           width: 121,
           toolbar: {
             autoSelected: 'pan',
-            show: false,
+            show: false
           },
           offsetX: 0,
           offsetY: 0,
           zoom: {
-            enabled: false,
+            enabled: false
           },
           sparkline: {
-            enabled: true,
-          },
+            enabled: true
+          }
         },
         series: [
           {
-            data: [800, 600, 1000, 800, 600, 1000, 800, 900],
-          },
+            data: [800, 600, 1000, 800, 600, 1000, 800, 900]
+          }
         ],
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 2,
+          width: 2
         },
         colors: ['#00EBFF'],
         tooltip: {
-          theme: 'light',
+          theme: 'light'
         },
         grid: {
           show: false,
           padding: {
             left: 0,
-            right: 0,
-          },
+            right: 0
+          }
         },
         yaxis: {
-          show: false,
+          show: false
         },
         fill: {
           type: 'solid',
-          opacity: [0.1],
+          opacity: [0.1]
         },
         legend: {
-          show: false,
+          show: false
         },
         xaxis: {
           low: 0,
@@ -1443,15 +1443,15 @@
           labels: {
             low: 0,
             offsetX: 0,
-            show: false,
+            show: false
           },
           axisBorder: {
             low: 0,
             offsetX: 0,
-            show: false,
-          },
-        },
-      },
+            show: false
+          }
+        }
+      }
     },
     {
       id: 'spae-line2',
@@ -1462,50 +1462,50 @@
           width: 121,
           toolbar: {
             autoSelected: 'pan',
-            show: false,
+            show: false
           },
           offsetX: 0,
           offsetY: 0,
           zoom: {
-            enabled: false,
+            enabled: false
           },
           sparkline: {
-            enabled: true,
-          },
+            enabled: true
+          }
         },
         series: [
           {
-            data: [800, 600, 1000, 800, 600, 1000, 800, 900],
-          },
+            data: [800, 600, 1000, 800, 600, 1000, 800, 900]
+          }
         ],
 
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 2,
+          width: 2
         },
         colors: ['#FB8F65'],
         tooltip: {
-          theme: 'light',
+          theme: 'light'
         },
         grid: {
           show: false,
           padding: {
             left: 0,
-            right: 0,
-          },
+            right: 0
+          }
         },
         yaxis: {
-          show: false,
+          show: false
         },
         fill: {
           type: 'solid',
-          opacity: [0.1],
+          opacity: [0.1]
         },
         legend: {
-          show: false,
+          show: false
         },
         xaxis: {
           low: 0,
@@ -1515,15 +1515,15 @@
           labels: {
             low: 0,
             offsetX: 0,
-            show: false,
+            show: false
           },
           axisBorder: {
             low: 0,
             offsetX: 0,
-            show: false,
-          },
-        },
-      },
+            show: false
+          }
+        }
+      }
     },
     {
       id: 'spae-line3',
@@ -1534,49 +1534,49 @@
           width: 121,
           toolbar: {
             autoSelected: 'pan',
-            show: false,
+            show: false
           },
           offsetX: 0,
           offsetY: 0,
           zoom: {
-            enabled: false,
+            enabled: false
           },
           sparkline: {
-            enabled: true,
-          },
+            enabled: true
+          }
         },
         series: [
           {
-            data: [800, 600, 1000, 800, 600, 1000, 800, 900],
-          },
+            data: [800, 600, 1000, 800, 600, 1000, 800, 900]
+          }
         ],
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 2,
+          width: 2
         },
         colors: ['#5743BE'],
         tooltip: {
-          theme: 'light',
+          theme: 'light'
         },
         grid: {
           show: false,
           padding: {
             left: 0,
-            right: 0,
-          },
+            right: 0
+          }
         },
         yaxis: {
-          show: false,
+          show: false
         },
         fill: {
           type: 'solid',
-          opacity: [0.1],
+          opacity: [0.1]
         },
         legend: {
-          show: false,
+          show: false
         },
         xaxis: {
           low: 0,
@@ -1586,15 +1586,15 @@
           labels: {
             low: 0,
             offsetX: 0,
-            show: false,
+            show: false
           },
           axisBorder: {
             low: 0,
             offsetX: 0,
-            show: false,
-          },
-        },
-      },
+            show: false
+          }
+        }
+      }
     },
     {
       id: 'wline1',
@@ -1605,49 +1605,49 @@
           width: 48,
           toolbar: {
             autoSelected: 'pan',
-            show: false,
+            show: false
           },
           offsetX: 0,
           offsetY: 0,
           zoom: {
-            enabled: false,
+            enabled: false
           },
           sparkline: {
-            enabled: true,
-          },
+            enabled: true
+          }
         },
         series: [
           {
-            data: [800, 600, 1000, 800, 600, 1000, 800, 900],
-          },
+            data: [800, 600, 1000, 800, 600, 1000, 800, 900]
+          }
         ],
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 2,
+          width: 2
         },
         colors: ['#00EBFF'],
         tooltip: {
-          theme: 'light',
+          theme: 'light'
         },
         grid: {
           show: false,
           padding: {
             left: 0,
-            right: 0,
-          },
+            right: 0
+          }
         },
         yaxis: {
-          show: false,
+          show: false
         },
         fill: {
           type: 'solid',
-          opacity: [0.1],
+          opacity: [0.1]
         },
         legend: {
-          show: false,
+          show: false
         },
         xaxis: {
           low: 0,
@@ -1657,15 +1657,15 @@
           labels: {
             low: 0,
             offsetX: 0,
-            show: false,
+            show: false
           },
           axisBorder: {
             low: 0,
             offsetX: 0,
-            show: false,
-          },
-        },
-      },
+            show: false
+          }
+        }
+      }
     },
     {
       id: 'wline2',
@@ -1676,49 +1676,49 @@
           width: 48,
           toolbar: {
             autoSelected: 'pan',
-            show: false,
+            show: false
           },
           offsetX: 0,
           offsetY: 0,
           zoom: {
-            enabled: false,
+            enabled: false
           },
           sparkline: {
-            enabled: true,
-          },
+            enabled: true
+          }
         },
         series: [
           {
-            data: [800, 600, 1000, 800, 600, 1000, 800, 900],
-          },
+            data: [800, 600, 1000, 800, 600, 1000, 800, 900]
+          }
         ],
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 2,
+          width: 2
         },
         colors: ['#FB8F65'],
         tooltip: {
-          theme: 'light',
+          theme: 'light'
         },
         grid: {
           show: false,
           padding: {
             left: 0,
-            right: 0,
-          },
+            right: 0
+          }
         },
         yaxis: {
-          show: false,
+          show: false
         },
         fill: {
           type: 'solid',
-          opacity: [0.1],
+          opacity: [0.1]
         },
         legend: {
-          show: false,
+          show: false
         },
         xaxis: {
           low: 0,
@@ -1728,15 +1728,15 @@
           labels: {
             low: 0,
             offsetX: 0,
-            show: false,
+            show: false
           },
           axisBorder: {
             low: 0,
             offsetX: 0,
-            show: false,
-          },
-        },
-      },
+            show: false
+          }
+        }
+      }
     },
     {
       id: 'wline3',
@@ -1747,49 +1747,49 @@
           width: 48,
           toolbar: {
             autoSelected: 'pan',
-            show: false,
+            show: false
           },
           offsetX: 0,
           offsetY: 0,
           zoom: {
-            enabled: false,
+            enabled: false
           },
           sparkline: {
-            enabled: true,
-          },
+            enabled: true
+          }
         },
         series: [
           {
-            data: [800, 600, 1000, 800, 600, 1000, 800, 900],
-          },
+            data: [800, 600, 1000, 800, 600, 1000, 800, 900]
+          }
         ],
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 2,
+          width: 2
         },
         colors: ['#5743BE'],
         tooltip: {
-          theme: 'light',
+          theme: 'light'
         },
         grid: {
           show: false,
           padding: {
             left: 0,
-            right: 0,
-          },
+            right: 0
+          }
         },
         yaxis: {
-          show: false,
+          show: false
         },
         fill: {
           type: 'solid',
-          opacity: [0.1],
+          opacity: [0.1]
         },
         legend: {
-          show: false,
+          show: false
         },
         xaxis: {
           low: 0,
@@ -1799,15 +1799,15 @@
           labels: {
             low: 0,
             offsetX: 0,
-            show: false,
+            show: false
           },
           axisBorder: {
             low: 0,
             offsetX: 0,
-            show: false,
-          },
-        },
-      },
+            show: false
+          }
+        }
+      }
     },
     {
       id: 'clmn_chart_1',
@@ -1818,71 +1818,71 @@
           width: 124,
           type: 'bar',
           toolbar: {
-            show: false,
+            show: false
           },
           offsetX: 0,
           offsetY: 0,
           zoom: {
-            enabled: false,
+            enabled: false
           },
           sparkline: {
-            enabled: true,
-          },
+            enabled: true
+          }
         },
         series: [
           {
             name: 'Revenue',
-            data: [40, 70, 45, 100, 75, 40, 80, 90],
-          },
+            data: [40, 70, 45, 100, 75, 40, 80, 90]
+          }
         ],
         plotOptions: {
           bar: {
             columnWidth: '60px',
-            barHeight: '100%',
-          },
+            barHeight: '100%'
+          }
         },
         legend: {
-          show: false,
+          show: false
         },
 
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 2,
+          width: 2
         },
 
         fill: {
-          opacity: 1,
+          opacity: 1
         },
         tooltip: {
           y: {
             formatter: function (val) {
               return '$ ' + val + 'k'
-            },
-          },
+            }
+          }
         },
         yaxis: {
-          show: false,
+          show: false
         },
         xaxis: {
           show: false,
           labels: {
-            show: false,
+            show: false
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
         colors: colors.info,
         grid: {
-          show: false,
-        },
-      },
+          show: false
+        }
+      }
     },
     {
       id: 'clmn_chart_2',
@@ -1893,71 +1893,71 @@
           width: 124,
           type: 'bar',
           toolbar: {
-            show: false,
+            show: false
           },
           offsetX: 0,
           offsetY: 0,
           zoom: {
-            enabled: false,
+            enabled: false
           },
           sparkline: {
-            enabled: true,
-          },
+            enabled: true
+          }
         },
         series: [
           {
             name: 'Revenue',
-            data: [40, 70, 45, 100, 75, 40, 80, 90],
-          },
+            data: [40, 70, 45, 100, 75, 40, 80, 90]
+          }
         ],
         plotOptions: {
           bar: {
             columnWidth: '60px',
-            barHeight: '100%',
-          },
+            barHeight: '100%'
+          }
         },
         legend: {
-          show: false,
+          show: false
         },
 
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 2,
+          width: 2
         },
 
         fill: {
-          opacity: 1,
+          opacity: 1
         },
         tooltip: {
           y: {
             formatter: function (val) {
               return '$ ' + val + 'k'
-            },
-          },
+            }
+          }
         },
         yaxis: {
-          show: false,
+          show: false
         },
         xaxis: {
           show: false,
           labels: {
-            show: false,
+            show: false
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
         colors: colors.success,
         grid: {
-          show: false,
-        },
-      },
+          show: false
+        }
+      }
     },
     {
       id: 'clmn_chart_3',
@@ -1968,71 +1968,71 @@
           width: 124,
           type: 'bar',
           toolbar: {
-            show: false,
+            show: false
           },
           offsetX: 0,
           offsetY: 0,
           zoom: {
-            enabled: false,
+            enabled: false
           },
           sparkline: {
-            enabled: true,
-          },
+            enabled: true
+          }
         },
         series: [
           {
             name: 'Revenue',
-            data: [40, 70, 45, 100, 75, 40, 80, 90],
-          },
+            data: [40, 70, 45, 100, 75, 40, 80, 90]
+          }
         ],
         plotOptions: {
           bar: {
             columnWidth: '60px',
-            barHeight: '100%',
-          },
+            barHeight: '100%'
+          }
         },
         legend: {
-          show: false,
+          show: false
         },
 
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 2,
+          width: 2
         },
 
         fill: {
-          opacity: 1,
+          opacity: 1
         },
         tooltip: {
           y: {
             formatter: function (val) {
               return '$ ' + val + 'k'
-            },
-          },
+            }
+          }
         },
         yaxis: {
-          show: false,
+          show: false
         },
         xaxis: {
           show: false,
           labels: {
-            show: false,
+            show: false
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
         colors: colors.warning,
         grid: {
-          show: false,
-        },
-      },
+          show: false
+        }
+      }
     },
     {
       id: 'revenue-barchart',
@@ -2042,29 +2042,29 @@
           width: '100%',
           type: 'bar',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [
           {
             name: 'Net Profit',
-            data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+            data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
           },
           {
             name: 'Revenue',
-            data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+            data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
           },
           {
             name: 'Free Cash Flow',
-            data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
-          },
+            data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+          }
         ],
         plotOptions: {
           bar: {
             horizontal: false,
             endingShape: 'rounded',
-            columnWidth: '45%',
-          },
+            columnWidth: '45%'
+          }
         },
         legend: {
           show: true,
@@ -2078,15 +2078,15 @@
             height: 8,
             offsetY: -1,
             offsetX: -5,
-            radius: 12,
+            radius: 12
           },
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
+            colors: isDark ? '#CBD5E1' : '#475569'
           },
           itemMargin: {
             horizontal: 18,
-            vertical: 0,
-          },
+            vertical: 0
+          }
         },
         title: {
           text: 'Revenue Report',
@@ -2099,25 +2099,25 @@
             fontSize: '20px',
             fontWeight: '500',
             fontFamily: 'Inter',
-            color: isDark ? '#fff' : '#0f172a',
-          },
+            color: isDark ? '#fff' : '#0f172a'
+          }
         },
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           show: true,
           width: 2,
-          colors: ['transparent'],
+          colors: ['transparent']
         },
         yaxis: {
           opposite: isRtl ? true : false,
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         xaxis: {
           categories: [
@@ -2129,38 +2129,38 @@
             'Jul',
             'Aug',
             'Sep',
-            'Oct',
+            'Oct'
           ],
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
 
         fill: {
-          opacity: 1,
+          opacity: 1
         },
         tooltip: {
           y: {
             formatter: function (val) {
               return '$ ' + val + ' thousands'
-            },
-          },
+            }
+          }
         },
         colors: ['#4669FA', '#0CE7FA', '#FA916B'],
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#E2E8F0',
           strokeDashArray: 10,
-          position: 'back',
+          position: 'back'
         },
         responsive: [
           {
@@ -2169,17 +2169,17 @@
               legend: {
                 position: 'bottom',
                 offsetY: 8,
-                horizontalAlign: 'center',
+                horizontalAlign: 'center'
               },
               plotOptions: {
                 bar: {
-                  columnWidth: '80%',
-                },
-              },
-            },
-          },
-        ],
-      },
+                  columnWidth: '80%'
+                }
+              }
+            }
+          }
+        ]
+      }
     },
     {
       id: 'radial-bar',
@@ -2188,8 +2188,8 @@
           type: 'radialBar',
           height: 360,
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [44, 55, 67, 83],
         plotOptions: {
@@ -2197,11 +2197,11 @@
             dataLabels: {
               name: {
                 fontSize: '22px',
-                color: isDark ? '#CBD5E1' : '#475569',
+                color: isDark ? '#CBD5E1' : '#475569'
               },
               value: {
                 fontSize: '16px',
-                color: isDark ? '#CBD5E1' : '#475569',
+                color: isDark ? '#CBD5E1' : '#475569'
               },
               total: {
                 show: true,
@@ -2209,18 +2209,18 @@
                 color: isDark ? '#CBD5E1' : '#475569',
                 formatter: function () {
                   return 249
-                },
-              },
+                }
+              }
             },
             track: {
               background: '#E2E8F0',
-              strokeWidth: '97%',
-            },
-          },
+              strokeWidth: '97%'
+            }
+          }
         },
         labels: ['A', 'B', 'C', 'D'],
-        colors: ['#4669FA', '#FA916B', '#50C793', '#0CE7FA'],
-      },
+        colors: ['#4669FA', '#FA916B', '#50C793', '#0CE7FA']
+      }
     },
     {
       id: 'radar-home-chart',
@@ -2229,8 +2229,8 @@
           height: 320,
           type: 'radialBar',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [67],
         plotOptions: {
@@ -2240,11 +2240,11 @@
             dataLabels: {
               name: {
                 fontSize: '22px',
-                color: isDark ? '#E2E8F0' : '#475569',
+                color: isDark ? '#E2E8F0' : '#475569'
               },
               value: {
                 fontSize: '16px',
-                color: isDark ? '#E2E8F0' : '#475569',
+                color: isDark ? '#E2E8F0' : '#475569'
               },
               total: {
                 show: true,
@@ -2252,10 +2252,10 @@
                 color: isDark ? '#E2E8F0' : '#475569',
                 formatter: function () {
                   return 249
-                },
-              },
-            },
-          },
+                }
+              }
+            }
+          }
         },
         fill: {
           type: 'gradient',
@@ -2265,14 +2265,14 @@
             inverseColors: false,
             opacityFrom: 1,
             opacityTo: 1,
-            stops: [0, 50, 65, 91],
-          },
+            stops: [0, 50, 65, 91]
+          }
         },
         stroke: {
-          dashArray: 4,
+          dashArray: 4
         },
-        colors: ['#4669FA'],
-      },
+        colors: ['#4669FA']
+      }
     },
     {
       id: 'visitor-chart',
@@ -2281,42 +2281,42 @@
           height: 350,
           type: 'radar',
           toolbar: {
-            show: false,
+            show: false
           },
           dropShadow: {
             enabled: false,
             blur: 8,
             left: 1,
             top: 1,
-            opacity: 0.5,
-          },
+            opacity: 0.5
+          }
         },
         series: [
           {
             name: 'Male',
-            data: [41, 64, 81, 60, 42, 42, 33, 23],
+            data: [41, 64, 81, 60, 42, 42, 33, 23]
           },
           {
             name: 'Female',
-            data: [65, 46, 42, 25, 58, 63, 76, 43],
-          },
+            data: [65, 46, 42, 25, 58, 63, 76, 43]
+          }
         ],
         legend: {
           show: true,
           fontSize: '14px',
           fontFamily: 'Inter',
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
-          },
+            colors: isDark ? '#CBD5E1' : '#475569'
+          }
         },
         yaxis: {
           show: true,
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         colors: [colors.warning, colors.primary],
         xaxis: {
@@ -2328,27 +2328,27 @@
             '2018',
             '2015',
             '2014',
-            '2013',
+            '2013'
           ],
           labels: {
             style: {
-              colors: isDark ? '#CBD5E1' : '#475569',
-            },
-          },
+              colors: isDark ? '#CBD5E1' : '#475569'
+            }
+          }
         },
         fill: {
-          opacity: [0.5, 0.5],
+          opacity: [0.5, 0.5]
         },
         stroke: {
-          width: 2,
+          width: 2
         },
         markers: {
-          size: 0,
+          size: 0
         },
         grid: {
-          show: false,
-        },
-      },
+          show: false
+        }
+      }
     },
     {
       id: 'stack-bar-chart',
@@ -2358,29 +2358,29 @@
           type: 'bar',
           stacked: true,
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         series: [
           {
             name: 'Sales qualified',
-            data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+            data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
           },
           {
             name: 'Meeting',
-            data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+            data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
           },
           {
             name: 'In negotiation',
-            data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
-          },
+            data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+          }
         ],
         plotOptions: {
           bar: {
             horizontal: false,
             endingShape: 'rounded',
-            columnWidth: '55%',
-          },
+            columnWidth: '55%'
+          }
         },
         legend: {
           show: true,
@@ -2394,33 +2394,33 @@
             height: 6,
             offsetY: 0,
             offsetX: -5,
-            radius: 12,
+            radius: 12
           },
           itemMargin: {
             horizontal: 18,
-            vertical: 0,
+            vertical: 0
           },
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
-          },
+            colors: isDark ? '#CBD5E1' : '#475569'
+          }
         },
 
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           show: true,
           width: 2,
-          colors: ['transparent'],
+          colors: ['transparent']
         },
 
         yaxis: {
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
 
         xaxis: {
@@ -2433,41 +2433,41 @@
             'Jul',
             'Aug',
             'Sep',
-            'Oct',
+            'Oct'
           ],
           labels: {
             offsetY: -3,
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
+            show: false
+          }
         },
 
         fill: {
-          opacity: 1,
+          opacity: 1
         },
         tooltip: {
           y: {
             formatter: function (val) {
               return '$ ' + val + ' thousands'
-            },
-          },
+            }
+          }
         },
         colors: [colors.primary, colors.info, colors.warning],
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#E2E8F0',
           strokeDashArray: 10,
-          position: 'back',
-        },
-      },
+          position: 'back'
+        }
+      }
     },
     {
       id: 'pie-chart-cal',
@@ -2477,12 +2477,12 @@
           height: 335,
           type: 'pie',
           toolbar: {
-            show: false,
-          },
+            show: false
+          }
         },
         labels: ['70% Sent', '18% Opend', '12% Rejected'],
         dataLabels: {
-          enabled: true,
+          enabled: true
         },
 
         colors: [colors.success, colors.warning, '#A3A1FB'],
@@ -2493,19 +2493,19 @@
           fontFamily: 'Inter',
           fontWeight: 400,
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
+            colors: isDark ? '#CBD5E1' : '#475569'
           },
           markers: {
             width: 6,
             height: 6,
             offsetY: -1,
             offsetX: -5,
-            radius: 12,
+            radius: 12
           },
           itemMargin: {
             horizontal: 10,
-            vertical: 0,
-          },
+            vertical: 0
+          }
         },
 
         responsive: [
@@ -2513,12 +2513,12 @@
             breakpoint: 480,
             options: {
               legend: {
-                position: 'bottom',
-              },
-            },
-          },
-        ],
-      },
+                position: 'bottom'
+              }
+            }
+          }
+        ]
+      }
     },
     {
       id: 'history-chart',
@@ -2527,34 +2527,34 @@
           height: 360,
           type: 'area',
           toolbar: {
-            show: false,
+            show: false
           },
           offsetX: 0,
           offsetY: 0,
           zoom: {
-            enabled: false,
-          },
+            enabled: false
+          }
         },
         series: [
           {
             name: 'Earnings',
-            data: [31, 40, 28, 51, 42, 109, 100],
+            data: [31, 40, 28, 51, 42, 109, 100]
           },
           {
             name: 'Expenses',
-            data: [11, 32, 45, 32, 34, 52, 41],
-          },
+            data: [11, 32, 45, 32, 34, 52, 41]
+          }
         ],
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'straight',
-          width: 2,
+          width: 2
         },
         colors: [colors.primary, colors.warning],
         tooltip: {
-          theme: 'dark',
+          theme: 'dark'
         },
         legend: {
           offsetY: 4,
@@ -2562,25 +2562,25 @@
           fontSize: '12px',
           fontFamily: 'Inter',
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
+            colors: isDark ? '#CBD5E1' : '#475569'
           },
           markers: {
             width: 6,
             height: 6,
             offsetY: 0,
             offsetX: -5,
-            radius: 12,
+            radius: 12
           },
           itemMargin: {
             horizontal: 18,
-            vertical: 0,
-          },
+            vertical: 0
+          }
         },
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#e2e8f0',
           strokeDashArray: 10,
-          position: 'back',
+          position: 'back'
         },
         fill: {
           type: 'gradient',
@@ -2588,16 +2588,16 @@
             shadeIntensity: 0.3,
             opacityFrom: 0.4,
             opacityTo: 0.5,
-            stops: [0, 30, 0],
-          },
+            stops: [0, 30, 0]
+          }
         },
         yaxis: {
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         xaxis: {
           type: 'datetime',
@@ -2608,22 +2608,22 @@
             '2018-09-19T03:30:00.000Z',
             '2018-09-19T04:30:00.000Z',
             '2018-09-19T05:30:00.000Z',
-            '2018-09-19T06:30:00.000Z',
+            '2018-09-19T06:30:00.000Z'
           ],
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
+            show: false
           },
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
-        },
-      },
+              fontFamily: 'Inter'
+            }
+          }
+        }
+      }
     },
     {
       id: 'account-receivable-chart',
@@ -2632,36 +2632,36 @@
           height: 300,
           type: 'line',
           toolbar: {
-            show: false,
+            show: false
           },
           offsetX: 0,
           offsetY: 0,
           zoom: {
-            enabled: false,
-          },
+            enabled: false
+          }
         },
         series: [
           {
-            data: [31, 40, 28, 51, 42, 109, 100],
-          },
+            data: [31, 40, 28, 51, 42, 109, 100]
+          }
         ],
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 2,
+          width: 2
         },
         colors: [colors.warning],
         tooltip: {
-          theme: 'dark',
+          theme: 'dark'
         },
         legend: {
           offsetY: 6,
           show: true,
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
-          },
+            colors: isDark ? '#CBD5E1' : '#475569'
+          }
         },
         markers: {
           size: 4,
@@ -2671,23 +2671,23 @@
           shape: 'circle',
           radius: 2,
           hover: {
-            sizeOffset: 1,
-          },
+            sizeOffset: 1
+          }
         },
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#e2e8f0',
           strokeDashArray: 10,
-          position: 'back',
+          position: 'back'
         },
 
         yaxis: {
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         xaxis: {
           type: 'datetime',
@@ -2698,22 +2698,22 @@
             '2018-09-19T03:30:00.000Z',
             '2018-09-19T04:30:00.000Z',
             '2018-09-19T05:30:00.000Z',
-            '2018-09-19T06:30:00.000Z',
+            '2018-09-19T06:30:00.000Z'
           ],
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
-        },
-      },
+            show: false
+          }
+        }
+      }
     },
     {
       id: 'payable-chart',
@@ -2722,36 +2722,36 @@
           type: 'line',
           height: 300,
           toolbar: {
-            show: false,
+            show: false
           },
           offsetX: 0,
           offsetY: 0,
           zoom: {
-            enabled: false,
-          },
+            enabled: false
+          }
         },
         series: [
           {
-            data: [31, 40, 28, 51, 42, 109, 100],
-          },
+            data: [31, 40, 28, 51, 42, 109, 100]
+          }
         ],
         dataLabels: {
-          enabled: false,
+          enabled: false
         },
         stroke: {
           curve: 'smooth',
-          width: 2,
+          width: 2
         },
         colors: [colors.primary],
         tooltip: {
-          theme: 'dark',
+          theme: 'dark'
         },
         legend: {
           offsetY: 6,
           show: true,
           labels: {
-            colors: isDark ? '#CBD5E1' : '#475569',
-          },
+            colors: isDark ? '#CBD5E1' : '#475569'
+          }
         },
         markers: {
           size: 4,
@@ -2761,23 +2761,23 @@
           shape: 'circle',
           radius: 2,
           hover: {
-            sizeOffset: 1,
-          },
+            sizeOffset: 1
+          }
         },
         grid: {
           show: true,
           borderColor: isDark ? '#334155' : '#e2e8f0',
           strokeDashArray: 10,
-          position: 'back',
+          position: 'back'
         },
 
         yaxis: {
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
-          },
+              fontFamily: 'Inter'
+            }
+          }
         },
         xaxis: {
           type: 'datetime',
@@ -2788,23 +2788,23 @@
             '2018-09-19T03:30:00.000Z',
             '2018-09-19T04:30:00.000Z',
             '2018-09-19T05:30:00.000Z',
-            '2018-09-19T06:30:00.000Z',
+            '2018-09-19T06:30:00.000Z'
           ],
           labels: {
             style: {
               colors: isDark ? '#CBD5E1' : '#475569',
-              fontFamily: 'Inter',
-            },
+              fontFamily: 'Inter'
+            }
           },
           axisBorder: {
-            show: false,
+            show: false
           },
           axisTicks: {
-            show: false,
-          },
-        },
-      },
-    },
+            show: false
+          }
+        }
+      }
+    }
   ]
 
   const chartJsOptions = [
@@ -2819,7 +2819,7 @@
           'April',
           'May',
           'June',
-          'July',
+          'July'
         ],
         datasets: [
           {
@@ -2832,7 +2832,7 @@
             borderWidth: 2,
             borderRadius: '15',
             borderSkipped: 'bottom',
-            barThickness: 25,
+            barThickness: 25
           },
           {
             label: ' data two',
@@ -2843,42 +2843,42 @@
             borderWidth: 2,
             borderRadius: '15',
             borderSkipped: 'bottom',
-            barThickness: 25,
-          },
-        ],
+            barThickness: 25
+          }
+        ]
       },
       options: {
         responsive: true,
         plugins: {
           legend: {
             labels: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
-          },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
+          }
         },
 
         scales: {
           y: {
             grid: {
-              color: isDark ? '#334155' : '#e2e8f0',
+              color: isDark ? '#334155' : '#e2e8f0'
             },
             ticks: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
           },
           x: {
             grid: {
-              color: isDark ? '#334155' : '#e2e8f0',
+              color: isDark ? '#334155' : '#e2e8f0'
             },
 
             ticks: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
-          },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
+          }
         },
 
-        maintainAspectRatio: false,
-      },
+        maintainAspectRatio: false
+      }
     },
     {
       id: 'chart2',
@@ -2891,7 +2891,7 @@
           'April',
           'May',
           'June',
-          'July',
+          'July'
         ],
 
         datasets: [
@@ -2902,9 +2902,9 @@
             backgroundColor: hexToRGB(colors.primary, 0.9),
             borderWidth: 2,
             borderColor: 'transparent',
-            barThickness: 20,
-          },
-        ],
+            barThickness: 20
+          }
+        ]
       },
       options: {
         responsive: true,
@@ -2912,32 +2912,32 @@
         plugins: {
           legend: {
             labels: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
-          },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
+          }
         },
 
         scales: {
           y: {
             grid: {
-              color: isDark ? '#334155' : '#e2e8f0',
+              color: isDark ? '#334155' : '#e2e8f0'
             },
             ticks: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
           },
           x: {
             grid: {
-              color: isDark ? '#334155' : '#e2e8f0',
+              color: isDark ? '#334155' : '#e2e8f0'
             },
 
             ticks: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
-          },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
+          }
         },
-        indexAxis: 'y',
-      },
+        indexAxis: 'y'
+      }
     },
     {
       id: 'chart3',
@@ -2950,7 +2950,7 @@
           'April',
           'May',
           'June',
-          'July',
+          'July'
         ],
         datasets: [
           {
@@ -2961,7 +2961,7 @@
             borderColor: colors.primary,
 
             borderSkipped: 'bottom',
-            barThickness: 40,
+            barThickness: 40
           },
           {
             label: ' data two',
@@ -2971,7 +2971,7 @@
             borderColor: colors.success,
 
             borderSkipped: 'bottom',
-            barThickness: 40,
+            barThickness: 40
           },
           {
             label: ' data three',
@@ -2981,9 +2981,9 @@
             borderColor: colors.success,
 
             borderSkipped: 'bottom',
-            barThickness: 40,
-          },
-        ],
+            barThickness: 40
+          }
+        ]
       },
       options: {
         responsive: true,
@@ -2991,47 +2991,47 @@
         plugins: {
           legend: {
             labels: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
-          },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
+          }
         },
         scales: {
           x: {
             stacked: true,
             grid: {
-              color: isDark ? '#334155' : '#e2e8f0',
+              color: isDark ? '#334155' : '#e2e8f0'
             },
 
             ticks: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
           },
           y: {
             stacked: true,
             grid: {
-              color: isDark ? '#334155' : '#e2e8f0',
+              color: isDark ? '#334155' : '#e2e8f0'
             },
 
             ticks: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
-          },
-        },
-      },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
+          }
+        }
+      }
     },
     {
       id: 'chart4',
       type: 'line',
       data: {
         labels: [
-          0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140,
+          0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140
         ],
         datasets: [
           {
             label: ' data one',
             data: [
               80, 150, 180, 270, 210, 160, 160, 202, 265, 210, 270, 255, 290,
-              360, 375,
+              360, 375
             ],
             fill: false,
             backgroundColor: hexToRGB(colors.primary, 1),
@@ -3046,13 +3046,13 @@
             pointStyle: 'circle',
             pointShadowOffsetX: 1,
             pointShadowOffsetY: 1,
-            pointShadowBlur: 5,
+            pointShadowBlur: 5
           },
           {
             label: ' data two',
             data: [
               80, 125, 105, 130, 215, 195, 140, 160, 230, 300, 220, 170, 210,
-              200, 280,
+              200, 280
             ],
             fill: false,
             backgroundColor: hexToRGB(colors.success, 1),
@@ -3067,13 +3067,12 @@
             pointStyle: 'circle',
             pointShadowOffsetX: 1,
             pointShadowOffsetY: 1,
-            pointShadowBlur: 5,
+            pointShadowBlur: 5
           },
           {
             label: ' data three',
             data: [
-              80, 99, 82, 90, 115, 115, 74, 75, 130, 155, 125, 90, 140, 130,
-              180,
+              80, 99, 82, 90, 115, 115, 74, 75, 130, 155, 125, 90, 140, 130, 180
             ],
             fill: false,
             backgroundColor: hexToRGB(colors.danger, 1),
@@ -3088,9 +3087,9 @@
             pointStyle: 'circle',
             pointShadowOffsetX: 1,
             pointShadowOffsetY: 1,
-            pointShadowBlur: 5,
-          },
-        ],
+            pointShadowBlur: 5
+          }
+        ]
       },
       options: {
         responsive: true,
@@ -3098,31 +3097,31 @@
         plugins: {
           legend: {
             labels: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
-          },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
+          }
         },
         scales: {
           y: {
             stacked: true,
             grid: {
-              color: isDark ? '#334155' : '#e2e8f0',
+              color: isDark ? '#334155' : '#e2e8f0'
             },
             ticks: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
           },
           x: {
             grid: {
-              color: isDark ? '#334155' : '#e2e8f0',
+              color: isDark ? '#334155' : '#e2e8f0'
             },
 
             ticks: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
-          },
-        },
-      },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
+          }
+        }
+      }
     },
     {
       id: 'chart5',
@@ -3135,7 +3134,7 @@
           'Designing',
           'Coding',
           'Cycling',
-          'Running',
+          'Running'
         ],
         datasets: [
           {
@@ -3143,25 +3142,25 @@
             data: [65, 59, 90, 81, 56, 55, 40],
             fill: true,
             backgroundColor: colors.primary,
-            borderColor: colors.primary,
+            borderColor: colors.primary
           },
           {
             label: 'My Second Dataset',
             data: [28, 48, 40, 19, 96, 27, 100],
             fill: true,
             backgroundColor: colors.success,
-            borderColor: colors.success,
-          },
-        ],
+            borderColor: colors.success
+          }
+        ]
       },
       options: {
         responsive: true,
         plugins: {
           legend: {
             labels: {
-              color: isDark ? '#cbd5e1' : '#475569',
-            },
-          },
+              color: isDark ? '#cbd5e1' : '#475569'
+            }
+          }
         },
 
         scales: {
@@ -3169,21 +3168,21 @@
             ticks: {
               display: false,
               maxTicksLimit: 1,
-              color: isDark ? '#cbd5e1' : '#475569',
+              color: isDark ? '#cbd5e1' : '#475569'
             },
             grid: {
-              color: isDark ? '#334155' : '#e2e8f0',
+              color: isDark ? '#334155' : '#e2e8f0'
             },
             pointLabels: {
-              color: isDark ? '#cbd5e1' : '#475569',
+              color: isDark ? '#cbd5e1' : '#475569'
             },
             angleLines: {
-              color: isDark ? '#334155' : '#e2e8f0',
-            },
-          },
+              color: isDark ? '#334155' : '#e2e8f0'
+            }
+          }
         },
-        maintainAspectRatio: false,
-      },
+        maintainAspectRatio: false
+      }
     },
     {
       id: 'chart6',
@@ -3199,39 +3198,39 @@
               colors.success,
               colors.warning,
               colors.info,
-              colors.danger,
-            ],
-          },
-        ],
+              colors.danger
+            ]
+          }
+        ]
       },
       options: {
         responsive: true,
         plugins: {
           legend: {
             labels: {
-              color: '#cbd5e1',
-            },
-          },
+              color: '#cbd5e1'
+            }
+          }
         },
         scales: {
           r: {
             ticks: {
-              color: isDark ? '#475569' : '#475569',
+              color: isDark ? '#475569' : '#475569'
             },
             grid: {
-              color: isDark ? '#334155' : '#e2e8f0',
+              color: isDark ? '#334155' : '#e2e8f0'
             },
             pointLabels: {
-              color: isDark ? '#cbd5e1' : '#475569',
+              color: isDark ? '#cbd5e1' : '#475569'
             },
             angleLines: {
-              color: isDark ? '#334155' : '#e2e8f0',
-            },
-          },
+              color: isDark ? '#334155' : '#e2e8f0'
+            }
+          }
         },
-        maintainAspectRatio: false,
-      },
-    },
+        maintainAspectRatio: false
+      }
+    }
   ]
 
   // loop through chartOptions array to render charts
@@ -3250,7 +3249,7 @@
       const chartObj = new Chart(ctx, {
         type: chart.type,
         data: chart.data,
-        options: chart.options,
+        options: chart.options
       })
     }
   })
@@ -3286,13 +3285,13 @@
         type: 'donut',
         height,
         toolbar: {
-          show: false,
-        },
+          show: false
+        }
       },
       series: [70, 30],
       labels: ['Complete', 'Left'],
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       plotOptions: {
         pie: {
@@ -3304,7 +3303,7 @@
                 show: false,
                 fontSize: '14px',
                 fontWeight: 'bold',
-                fontFamily: 'Inter',
+                fontFamily: 'Inter'
               },
               value: {
                 show: true,
@@ -3313,7 +3312,7 @@
                 color: isDark ? '#cbd5e1' : '#0f172a',
                 formatter(val) {
                   return `${parseInt(val)}%`
-                },
+                }
               },
               total: {
                 show: true,
@@ -3321,21 +3320,21 @@
                 label: '',
                 formatter() {
                   return '70'
-                },
-              },
-            },
-          },
-        },
+                }
+              }
+            }
+          }
+        }
       },
       colors: [...colors],
       legend: {
-        show: false,
-      },
+        show: false
+      }
     }
     // your chart options object
     var chart = new ApexCharts(
       document.querySelector('#donut-chart' + randomId + index),
-      chartOptions,
+      chartOptions
     )
 
     // render the chart
@@ -3359,75 +3358,75 @@
         type: 'bar',
         height: height,
         toolbar: {
-          show: false,
+          show: false
         },
         offsetX: 0,
         offsetY: 0,
         zoom: {
-          enabled: false,
+          enabled: false
         },
         sparkline: {
-          enabled: true,
-        },
+          enabled: true
+        }
       },
       series: [
         {
           name: 'Revenue',
-          data: [40, 70, 45, 100, 75, 40, 80, 90],
-        },
+          data: [40, 70, 45, 100, 75, 40, 80, 90]
+        }
       ],
       plotOptions: {
         bar: {
           columnWidth: '60px',
-          barHeight: '100%',
-        },
+          barHeight: '100%'
+        }
       },
       legend: {
-        show: false,
+        show: false
       },
 
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       stroke: {
         curve: 'smooth',
-        width: 2,
+        width: 2
       },
 
       fill: {
-        opacity: 1,
+        opacity: 1
       },
       tooltip: {
         y: {
           formatter: function (val) {
             return '$ ' + val + 'k'
-          },
-        },
+          }
+        }
       },
       yaxis: {
-        show: false,
+        show: false
       },
       xaxis: {
         show: false,
         labels: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
-        },
+          show: false
+        }
       },
       colors: [...colors],
       grid: {
-        show: false,
-      },
+        show: false
+      }
     }
     // your chart options object
     var chart = new ApexCharts(
       document.querySelector('#barchart' + randomId + index),
-      chartOptions,
+      chartOptions
     )
 
     // render the chart
@@ -3451,29 +3450,29 @@
         type: 'line',
         height: height,
         toolbar: {
-          show: false,
+          show: false
         },
         offsetX: 0,
         offsetY: 0,
         zoom: {
-          enabled: false,
+          enabled: false
         },
         sparkline: {
-          enabled: true,
-        },
+          enabled: true
+        }
       },
       series: [
         {
-          data: [15, 30, 15, 30, 20, 35],
-        },
+          data: [15, 30, 15, 30, 20, 35]
+        }
       ],
       stroke: {
         width: [2],
         curve: 'straight',
-        dashArray: [0, 8, 5],
+        dashArray: [0, 8, 5]
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
 
       markers: {
@@ -3484,24 +3483,24 @@
         shape: 'circle',
         radius: 2,
         hover: {
-          sizeOffset: 1,
-        },
+          sizeOffset: 1
+        }
       },
 
       yaxis: {
-        show: false,
+        show: false
       },
       xaxis: {
         show: false,
         labels: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
-        },
+          show: false
+        }
       },
       grid: {
         show: true,
@@ -3510,21 +3509,21 @@
         position: 'back',
         xaxis: {
           lines: {
-            show: true,
-          },
+            show: true
+          }
         },
         yaxis: {
           lines: {
-            show: false,
-          },
-        },
+            show: false
+          }
+        }
       },
-      colors: [...colors],
+      colors: [...colors]
     }
     // your chart options object
     var chart = new ApexCharts(
       document.querySelector('#linechart' + randomId + index),
-      chartOptions,
+      chartOptions
     )
 
     // render the chart

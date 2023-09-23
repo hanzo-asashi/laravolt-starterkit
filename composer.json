@@ -9,15 +9,18 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "calebporzio/sushi": "^2.4",
+        "emreyarligan/enum-concern": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
         "jackiedo/dotenv-editor": "^2.1",
+        "laravel/folio": "^1.1",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/socialite": "^5.8",
         "laravel/tinker": "^2.8",
         "laravolt/avatar": "^5.0",
-        "livewire/livewire": "^3.0-beta",
-        "livewire/volt": "^1.0.0-beta",
+        "livewire/livewire": "^3.0.0",
+        "livewire/volt": "^1.0.0",
         "overtrue/laravel-versionable": "^4.4",
         "phlak/semver": "^4.1",
         "protonemedia/laravel-verify-new-email": "^1.8",
@@ -30,6 +33,7 @@
         "vemcogroup/laravel-translation": "^3.0"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-latest",
         "barryvdh/laravel-debugbar": "^3.8",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
